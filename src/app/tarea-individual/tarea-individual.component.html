@@ -1,0 +1,29 @@
+<div *ngIf="!mostrarDatos">
+    {{ tarea.texto }}
+
+
+    <span class="herramientas">
+    
+            <span class="item editar"> 
+                <i class="fas fa-pencil-alt fa-x" aria-hidden="true" (click)="activarEdicion(tarea.texto)"></i>
+            </span>
+
+    <span class="item editar"> 
+                    <i class="fas fa-check fa-x" aria-hidden="true" (click)="terminarTarea()"></i>
+                </span>
+
+
+    <span class="item borrar"> 
+                <i class="fas fa-trash-alt fa-x" aria-hidden="true" (click)="borrarRegistro(tarea)" ></i>
+            </span>
+
+    </span>
+</div>
+<div>
+
+    <div *ngIf="mostrarDatos">
+        <input type="text" [(ngModel)]="tareaModel.nombre">
+        <i class="fas fa-save fa-x" aria-hidden="true" (click)="editarTarea(tareaModel)"></i>
+    </div>
+
+</div>

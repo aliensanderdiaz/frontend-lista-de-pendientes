@@ -1,0 +1,7 @@
+<ul class="list-group">
+    <app-tarea-individual class="list-group-item" *ngFor="let item of tareas" [tarea]="item" (cambioTarea)="actualizar()" [ngClass]="item.terminado ? 'active': ''">
+    </app-tarea-individual>
+
+    <input type="text" [(ngModel)]="modeloItem.nuevoNombre">
+    <button (click)="crearRegistro()"> GUARDAR  </button>
+</ul>
